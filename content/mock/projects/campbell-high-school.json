@@ -6,8 +6,8 @@
   "size": "120,000 sq ft",
   "description": "A major campus renovation and expansion project for Campbell High School, including new science laboratories, performing arts center, and athletic facilities designed to support 21st-century learning.",
   "images": [
-    "https://images.unsplash.com/photo-1523050854058-8df90110c9d1?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1200&q=80"
+    "https://placehold.co/1200x800/3b82f6/white?text=Campbell+High+School",
+    "https://placehold.co/1200x800/60a5fa/white?text=Science+Labs",
+    "https://placehold.co/1200x800/93c5fd/white?text=Performing+Arts+Center"
   ]
 }

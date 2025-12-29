@@ -4,13 +4,15 @@ export default function ProjectSlideshow({ images = [] }) {
   const [translationX, setTranslationX] = useState(0)
   const [canGoLeft, setCanGoLeft] = useState(false)
   const [canGoRight, setCanGoRight] = useState(false)
+  const [imagesLoaded, setImagesLoaded] = useState(false)
 
   const trackRef = useRef(null)
   const containerRef = useRef(null)
+  const loadedCountRef = useRef(0)
 
   // Memoize the calculation logic so it can be reused
   const calculateMetrics = useCallback(() => {
-    if (!trackRef.current || !containerRef.current || images.length === 0) {
+    if (!trackRef.current || !containerRef.current || images.length === 0 || !imagesLoaded) {
       return
     }
 
@@ -26,10 +28,43 @@ export default function ProjectSlideshow({ images = [] }) {
     setCanGoLeft(newTranslationX > 0)
     setCanGoRight(newTranslationX < maxScroll)
 
-  }, [images, translationX])
+  }, [images, translationX, imagesLoaded])
+
+  // Handle image loading
+  const handleImageLoad = () => {
+    loadedCountRef.current += 1
+    if (loadedCountRef.current >= images.length) {
+      setImagesLoaded(true)
+    }
+  }
+
+  // Reset loaded count when images change and check if already cached
+  useEffect(() => {
+    loadedCountRef.current = 0
+    setImagesLoaded(false)
+    
+    // If no images, mark as loaded immediately
+    if (images.length === 0) {
+      setImagesLoaded(true)
+      return
+    }
+
+    // Check if images are already cached/loaded
+    const timer = setTimeout(() => {
+      // If after 3 seconds we haven't loaded all images, force show anyway
+      if (!imagesLoaded && loadedCountRef.current < images.length) {
+        console.warn(`Only ${loadedCountRef.current}/${images.length} images loaded, forcing display`)
+        setImagesLoaded(true)
+      }
+    }, 3000)
+
+    return () => clearTimeout(timer)
+  }, [images])
 
   // Run calculations on mount, resize, and when images change
   useEffect(() => {
+    if (!imagesLoaded) return
+
     // Need a slight delay for images to render and give us the correct scrollWidth
     const timer = setTimeout(() => {
       calculateMetrics()
@@ -40,7 +75,7 @@ export default function ProjectSlideshow({ images = [] }) {
       window.removeEventListener('resize', calculateMetrics)
       clearTimeout(timer)
     }
-  }, [images, calculateMetrics])
+  }, [images, calculateMetrics, imagesLoaded])
 
   const go = (direction) => {
     if (!trackRef.current || !containerRef.current) return
@@ -62,7 +97,17 @@ export default function ProjectSlideshow({ images = [] }) {
 
   return (
     <section className="section-projects-slideshow">
-      <div className="slideshow-wrapper">
+      {!imagesLoaded && (
+        <div style={{ 
+          padding: '180px 20px', 
+          textAlign: 'center',
+          fontSize: '18px',
+          color: '#666'
+        }}>
+          Loading images...
+        </div>
+      )}
+      <div className="slideshow-wrapper" style={{ opacity: imagesLoaded ? 1 : 0 }}>
         <div className="arrow-btns">
           <i 
             className={`ion-android-arrow-dropleft arrow-btn ${!canGoLeft ? 'disabled' : ''}`} 
@@ -84,7 +129,12 @@ export default function ProjectSlideshow({ images = [] }) {
           >
             {images.map((src, index) => (
               <div key={index} className="slideshow-slide">
-                <img src={src} alt={`Project slide ${index + 1}`} />
+                <img 
+                  src={src} 
+                  alt={`Project slide ${index + 1}`}
+                  onLoad={handleImageLoad}
+                  onError={handleImageLoad}
+                />
               </div>
             ))}
           </div>

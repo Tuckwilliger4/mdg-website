@@ -1,0 +1,19 @@
+{
+  "branding": {
+    "companyName": "MDG",
+    "companyFullName": "McKim Design Group",
+    "logoImage": "/img/logo.png",
+    "logoImageDark": "/img/logo-dark.png",
+    "primaryColor": "#7819B1",
+    "secondaryColor": "#D3AC3F",
+    "accentColor": "#964636",
+    "fontHeading": "Montserrat",
+    "fontBody": "Lato"
+  },
+  "contact": {
+    "address": "4595 Cherry Avenue First Floor, San Jose, CA 95118",
+    "phone": "408.927.8110",
+    "fax": "408.927.8112",
+    "email": "kmckim@mckimdesign.com"
+  }
+}

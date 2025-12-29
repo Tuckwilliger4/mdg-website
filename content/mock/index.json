@@ -1,0 +1,49 @@
+{
+  "siteTitle": "McKim Design Group",
+  "tagline": "Plan. Design. Architecture.",
+  "heroImages": [
+    "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1200&q=80",
+    "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80",
+    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80"
+  ],
+  "heroCaptions": [
+    {"text": "Cougar Hall", "color": "white"},
+    {"text": "Capitola Home", "color": "black"},
+    {"text": "Moreland Middle School", "color": "white"}
+  ],
+  "homeHtml": "<p>McKim Design Group is a highly-regarded full-service architecture firm located in San Jose, California.</p>",
+  "sectionUs": {
+    "title": "Plan. Design. Architecture.",
+    "tabs": [
+      {
+        "title": "About",
+        "content": "McKim Design Group is a highly-regarded full-service architecture firm located in San Jose, California.<br><br>We work with school districts, commercial developers, residential homeowners, and specialty clients to deliver successful and award-winning projects on schedule and under budget.",
+        "link": "/services",
+        "linkText": "Our Services"
+      },
+      {
+        "title": "People",
+        "content": "Our team provides an efficient, enjoyable design environment to tackle your building needs. The personal attention we give to our clients has built a project base that generates 85% of our work from repeat patrons.",
+        "link": "/about",
+        "linkText": "Our Story"
+      },
+      {
+        "title": "Values",
+        "content": "Personal Engagement Matters<br><br>We strive to bring you personalized attention to suit your design and building needs.",
+        "link": "/about",
+        "linkText": "Our Standards"
+      }
+    ]
+  },
+  "sectionWork": [
+    {"title": "Educational", "image": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80", "link": "/projects?category=educational"},
+    {"title": "Residential", "image": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80", "link": "/projects?category=residential"},
+    {"title": "Commercial", "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80", "link": "/projects?category=commercial"}
+  ],
+  "contactBoxes": [
+    {"header": "Projects", "title": "Explore our work", "caption": "We have plenty of past buildings that will impress. Check out some of our projects, or click on our FTP.", "link": "/projects"},
+    {"header": "Contact", "title": "Start a project", "caption": "Join our team, so we can help bring your vision to life. As a small firm, we make it our number one focus to put you first.", "link": "/contact"},
+    {"header": "About Us", "title": "Read about Us", "caption": "Want to learn more about what makes McKim Design Group unique? Meet some of our highly skilled team members.", "link": "/about"}
+  ],
+  "footer": "© McKim Design Group"
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Garthwick Family Home",
+  "category": "Residential",
+  "location": "San Mateo, CA",
+  "year": "2019",
+  "size": "4,200 sq ft",
+  "description": "A custom family home designed for multigenerational living, featuring flexible spaces, accessible design elements, and private outdoor areas that support family gatherings and individual privacy.",
+  "images": [
+    "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1200&q=80",
+    "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80",
+    "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80"
+  ]
+}

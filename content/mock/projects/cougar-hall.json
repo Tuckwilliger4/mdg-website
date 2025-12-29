@@ -1,0 +1,13 @@
+{
+  "slug":"cougar-hall",
+  "title":"Cougar Hall",
+  "location":"Morgan Hill, CA",
+  "category":"Educational",
+  "status":"Completed",
+  "designLead":"John Smith",
+  "year":"2023",
+  "size":"15,000 sq ft",
+  "type":"Educational Renovation",
+  "descriptionHtml":"<p>Renovation and addition to Cougar Hall at a local educational facility. This project involved modernizing the existing structure while preserving its historical character. The design incorporated sustainable materials and energy-efficient systems to create a contemporary learning environment.</p><p>The renovation included updated classrooms, improved accessibility features, and enhanced technology infrastructure to support modern educational needs.</p>",
+  "images":["/img/mock/cougar1.jpg","/img/mock/cougar2.jpg", "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80"]
+}

@@ -1,0 +1,21 @@
+{
+  "companyImage": {
+    "title": "A Small Firm Centered Around You",
+    "buttons": ["Our Story", "Our Leadership"],
+    "bgImage": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80"
+  },
+  "ourStory": {
+    "title": "About Us",
+    "body": "McKim Design Group was founded in south San Jose in 1996 by Kirk S. McKim. Since then we have followed a \"general-practice\" business model providing design and management services in all sectors of the industry including residential, commercial, tenant improvement, restaurant, civic, K-12 educational, and post-secondary educational sectors.<br><br>Our project experience range from as small as school restroom remodels, as complex and environmentally conscious as the LEED GOLD certified City Hall for Rohnert Park, and as large as full campus modernizations and new schools. McKim Design Group endeavors to provide a professional yet enjoyable atmosphere that extends from its staff and office to every project they undertake. We find that because of the time and energy the entire team and owners invest, the process must not only be successful but fun."
+  },
+  "stats": [
+    {"stat": "14+", "desc": "local K-12 school districts that we have worked with"},
+    {"stat": "85%", "desc": "of our customers are repeat clients"},
+    {"stat": "16+", "desc": "residential neighborhoods in which we have worked"}
+  ],
+  "aboutSlides": [
+    {"title": "Personal", "caption": "Our role is to fit your needs."},
+    {"title": "Engagement", "caption": "We work side by side collaboratively with our clients."},
+    {"title": "Matters", "caption": "Big or small your project matters to us."}
+  ]
+}

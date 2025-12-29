@@ -4,8 +4,5 @@ node_modules/
 .env.local
 .env.*.local
 
-# Content (mock data shouldn't be committed to production repo)
-/content/mock/
-
 # legacy site (keep out of new repo root) - adjust as needed
 mdg_prev_website/

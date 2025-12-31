@@ -8,7 +8,7 @@ export default function Projects({list, site}){
   return (
     <Layout meta={{title:'Projects'}} site={site}>
       <ScrollProvider>
-        <ProjectGrid projects={list} />
+        <ProjectGrid projects={list} site={site} />
       </ScrollProvider>
     </Layout>
   )

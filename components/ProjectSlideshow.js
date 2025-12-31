@@ -5,10 +5,12 @@ export default function ProjectSlideshow({ images = [] }) {
   const [canGoLeft, setCanGoLeft] = useState(false)
   const [canGoRight, setCanGoRight] = useState(false)
   const [imagesLoaded, setImagesLoaded] = useState(false)
+  const [slideshowKey, setSlideshowKey] = useState(0)
 
   const trackRef = useRef(null)
   const containerRef = useRef(null)
   const loadedCountRef = useRef(0)
+  const lastHeightRef = useRef(0)
 
   // Memoize the calculation logic so it can be reused
   const calculateMetrics = useCallback(() => {
@@ -61,6 +63,27 @@ export default function ProjectSlideshow({ images = [] }) {
     return () => clearTimeout(timer)
   }, [images])
 
+  // Monitor container height changes and force remount when height changes
+  useEffect(() => {
+    if (!containerRef.current) return
+
+    const resizeObserver = new ResizeObserver(() => {
+      if (!containerRef.current) return
+      const currentHeight = containerRef.current.offsetHeight
+      
+      // If height changed significantly (>5px), remount the entire slideshow
+      if (lastHeightRef.current > 0 && Math.abs(currentHeight - lastHeightRef.current) > 5) {
+        setSlideshowKey(prev => prev + 1)
+      }
+      lastHeightRef.current = currentHeight
+    })
+
+    resizeObserver.observe(containerRef.current)
+    lastHeightRef.current = containerRef.current.offsetHeight
+
+    return () => resizeObserver.disconnect()
+  }, [])
+
   // Run calculations on mount, resize, and when images change
   useEffect(() => {
     if (!imagesLoaded) return
@@ -98,12 +121,7 @@ export default function ProjectSlideshow({ images = [] }) {
   return (
     <section className="section-projects-slideshow">
       {!imagesLoaded && (
-        <div style={{ 
-          padding: '180px 20px', 
-          textAlign: 'center',
-          fontSize: '18px',
-          color: '#666'
-        }}>
+        <div className="slideshow-loading">
           Loading images...
         </div>
       )}
@@ -120,6 +138,7 @@ export default function ProjectSlideshow({ images = [] }) {
         </div>
         <div className="slideshow-container" ref={containerRef}>
           <div 
+            key={slideshowKey}
             className="slideshow-track" 
             ref={trackRef}
             style={{ 

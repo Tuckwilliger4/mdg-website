@@ -15,5 +15,8 @@
     "phone": "408.927.8110",
     "fax": "408.927.8112",
     "email": "kmckim@mckimdesign.com"
+  },
+  "projects": {
+    "categoryOrder": ["Educational", "Residential", "Commercial"]
   }
 }

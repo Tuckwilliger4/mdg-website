@@ -35,16 +35,16 @@ export default function CompanyImage({ data }) {
       }}
     >
       <div className="company-image-container">
-        <h4>A Small Firm Centered Around You</h4>
+        <h4>{data.title}</h4>
         <div>
           <a className="image-btn js-scroll-story" onClick={() => {
             const element = document.querySelector('.section-our-story');
             if (element) smoothScroll(element, 1500);
-          }}>Our Story</a>
+          }}>{data.buttons[0]}</a>
           <a className="image-btn js-scroll-leadership" id="colored-btn" onClick={() => {
             const element = document.querySelector('.section-leadership');
             if (element) smoothScroll(element, 1500);
-          }}>Our Leadership</a>
+          }}>{data.buttons[1]}</a>
         </div>
       </div>
     </section>

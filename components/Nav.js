@@ -29,10 +29,12 @@ export default function Nav(){
     ? 'head-nav' 
     : 'head-nav absolute';
 
+  const headerClasses = `${navClasses}${menuOpen ? ' menu-open' : ''}`;
+
   return (
     <>
       {!isHomePage && <div className="ghost-nav" style={{ height: headerHeight, background: 'black' }} />}
-      <header ref={headerRef} className={navClasses}>
+      <header ref={headerRef} className={headerClasses}>
         <div style={{display:'flex',alignItems:'center'}}>
           <Link href="/"><img src="/img/logo.png" className="nav-logo mobile-only" style={{height:50}} /></Link>
           <Link href="/"><Logo size="nav" className="title desktop-logo" /></Link>

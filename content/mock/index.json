@@ -13,23 +13,27 @@
   ],
   "homeHtml": "<p>McKim Design Group is a highly-regarded full-service architecture firm located in San Jose, California.</p>",
   "sectionUs": {
-    "title": "Plan. Design. Architecture.",
+    "title": "Plan. Design.<br>Architecture.",
     "tabs": [
       {
         "title": "About",
+        "buttonLabel": "What we do",
         "content": "McKim Design Group is a highly-regarded full-service architecture firm located in San Jose, California.<br><br>We work with school districts, commercial developers, residential homeowners, and specialty clients to deliver successful and award-winning projects on schedule and under budget.",
         "link": "/services",
         "linkText": "Our Services"
       },
       {
         "title": "People",
+        "buttonLabel": "Who we are",
         "content": "Our team provides an efficient, enjoyable design environment to tackle your building needs. The personal attention we give to our clients has built a project base that generates 85% of our work from repeat patrons.",
         "link": "/about",
         "linkText": "Our Story"
       },
       {
         "title": "Values",
-        "content": "Personal Engagement Matters<br><br>We strive to bring you personalized attention to suit your design and building needs.",
+        "buttonLabel": "What we value",
+        "motto": "Personal Engagement Matters",
+        "content": "We strive to bring you personalized attention to suit your design and building needs.",
         "link": "/about",
         "linkText": "Our Standards"
       }

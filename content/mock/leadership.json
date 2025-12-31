@@ -4,34 +4,34 @@
     "name": "Kirk McKim",
     "position": "Principal-in-Charge",
     "bio": "A proven leader with a dynamic career in Architecture spanning over 30 years, Mr. McKim has extensive experience in California with a very diverse clientele and project portfolio. His background working for a large firm specializing in health-care and amusement park projects as well as his private sector experience at a small firm allowed Mr. McKim to assist in opening a local office for a major national firm. Eventually, Mr. McKim missed the hands-on day-to-day interaction with clients and time spent in the practice of architecture that only a small firm can provide. Thus, in 1996 he opened McKim Design Group, a general practice firm focused on complete project management from start to finish with principal involvement throughout all phases of every project.",
-    "image": "/img/leadership/kirk-mckim.jpg"
+    "image": "https://api.dicebear.com/7.x/big-smile/svg?seed=Kirk&backgroundColor=transparent"
   },
   {
     "id": 2,
     "name": "Todd Walter",
     "position": "Project Director",
     "bio": "Mr. Walter has 30 years of experience in all aspects of educational design including programming, feasibility studies, master planning, design, cost-estimating and construction administration. He has also led many community programming sessions and presentations over his career. Mr. Walter has experience working with many of the state agencies that govern K-12 facilities including Division of the State Architect (DSA), Office of Public School Construction (OPSC) and others including CDE, DTSC and the Health Department.",
-    "image": "/img/leadership/todd-walter.jpg"
+    "image": "https://api.dicebear.com/7.x/big-smile/svg?seed=Todd&backgroundColor=transparent"
   },
   {
     "id": 3,
     "name": "Emeline Oliveri",
     "position": "Designer & Project Manager",
     "bio": "An outstanding communicator with enduring client relationships and excellent interpersonal skills, Mrs. Oliveri is a proven leader of architectural programming efforts and conceptualization within the K-12 design team. Her background in Art History allows a unique perspective on design and lends to her skills in interior design and space planning. Mrs. Oliveri's tenure — extending back to 2004 — with McKim Design Group has honed her knowledge of building construction and detailing across a wide range of educational and residential projects and reinforced her position as a cardinal team member for K-12 construction administration.",
-    "image": "/img/leadership/emeline-oliveri.jpg"
+    "image": "https://api.dicebear.com/7.x/big-smile/svg?seed=Emeline&backgroundColor=transparent"
   },
   {
     "id": 4,
     "name": "Diana Chin",
     "position": "Project Leader",
     "bio": "Diana is a project leader at McKim Design Group. More details to come!",
-    "image": "/img/leadership/diana-chin.jpg"
+    "image": "https://api.dicebear.com/7.x/big-smile/svg?seed=Diana&backgroundColor=transparent"
   },
   {
     "id": 5,
     "name": "Cindy McKim",
     "position": "Office Manager",
     "bio": "Cindy McKim is McKim Design Group's Office Manager. More details to come!",
-    "image": "/img/leadership/cindy-mckim.jpg"
+    "image": "https://api.dicebear.com/7.x/big-smile/svg?seed=Cindy&backgroundColor=transparent"
   }
 ]

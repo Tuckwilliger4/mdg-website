@@ -14,6 +14,7 @@ export const ScrollProvider = ({ children }) => {
   const [activeIndex, setActiveIndex] = useState(null)
   const elements = useRef(new Map()) // Map of index -> DOM element
   const observer = useRef(null)
+  const currentActiveIndex = useRef(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,7 +43,8 @@ export const ScrollProvider = ({ children }) => {
       })
 
       // Update active index (can be null if no element is close enough)
-      if (closestIndex !== activeIndex) {
+      if (closestIndex !== currentActiveIndex.current) {
+        currentActiveIndex.current = closestIndex
         setActiveIndex(closestIndex)
       }
     }
@@ -56,7 +58,7 @@ export const ScrollProvider = ({ children }) => {
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [activeIndex])
+  }, [])
 
   const registerElement = (index, element) => {
     if (element) {

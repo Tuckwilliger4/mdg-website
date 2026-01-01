@@ -577,7 +577,7 @@ h6 {
 .container-about-text {
   color: white;
   font-size: 1.5rem;
-  font-weight: 100;
+  font-weight: 300;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -1198,7 +1198,7 @@ h6 {
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.3);
     cursor: pointer;
-    transition: background 0.3s;
+    transition: all 0.3s;
   }
 
   .leader-dot.active {
@@ -1230,7 +1230,7 @@ h6 {
     justify-content: center;
     cursor: pointer;
     font-size: 2.2rem;
-    transition: background 0.3s;
+    transition: all 0.3s;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   }
 
@@ -1324,7 +1324,7 @@ h6 {
     border: none;
     font-size: 2rem;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: all 0.3s;
   }
 
   .arrow-btn-about:hover {
@@ -1459,7 +1459,7 @@ h6 {
   flex-direction: column;
   justify-content: space-between;
   padding: 50px 30px;
-  transition: background 0.3s;
+  transition: all 0.3s;
   position: relative;
 }
 
@@ -1561,6 +1561,22 @@ h6 {
 .footer-logo-section {
   display: flex;
   justify-content: center;
+}
+
+.footer-logo-section img {
+  height: 40px;
+}
+
+@media (max-width: 1023px) {
+  .footer-logo-section img {
+    height: 35px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-logo-section img {
+    height: 30px;
+  }
 }
 
 .footer-contact-row {
@@ -1797,7 +1813,7 @@ h6 {
   background: rgba(0, 0, 0, 0.7);
   color: white;
   z-index: 2;
-  transition: background 0.3s, opacity 0.3s;
+  transition: all 0.3s;
   opacity: 0;
 }
 
@@ -1878,7 +1894,7 @@ h6 {
     opacity: 1;
     background: rgba(0, 0, 0, 0.5);
     pointer-events: none;
-    transition: background 0.6s ease;
+    transition: all 0.6s ease;
   }
   
   .project-grid-btn {
@@ -2330,7 +2346,7 @@ h6 {
 }
 
 .services-content.open {
-  max-height: 500px;
+  max-height: 100%;
 }
 
 .services-content-inner {

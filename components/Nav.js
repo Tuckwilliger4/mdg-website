@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react'
 import { useRouter } from 'next/router'
 import Logo from './Logo'
 
-export default function Nav(){
+export default function Nav({ site }){
   const [menuOpen, setMenuOpen] = useState(false)
   const router = useRouter()
   const isHomePage = router.pathname === '/'
@@ -36,8 +36,16 @@ export default function Nav(){
       {!isHomePage && <div className="ghost-nav" style={{ height: headerHeight, background: 'black' }} />}
       <header ref={headerRef} className={headerClasses}>
         <div style={{display:'flex',alignItems:'center'}}>
-          <Link href="/"><img src="/img/logo.png" className="nav-logo mobile-only" style={{height:50}} /></Link>
-          <Link href="/"><Logo size="nav" className="title desktop-logo" /></Link>
+          {site?.branding?.mobileLogo ? (
+            <Link href="/"><img src={site.branding.mobileLogo} alt={site.branding.companyFullName} className="nav-logo mobile-only" style={{height:50}} /></Link>
+          ) : (
+            <Link href="/" className="mobile-only"><Logo size="nav" className="title" /></Link>
+          )}
+          {site?.branding?.desktopLogo ? (
+            <Link href="/"><img src={site.branding.desktopLogo} alt={site.branding.companyFullName} className="nav-logo desktop-logo" style={{height:50}} /></Link>
+          ) : (
+            <Link href="/"><Logo size="nav" className="title desktop-logo" /></Link>
+          )}
         </div>
         <nav>
           <ul className="main-nav">

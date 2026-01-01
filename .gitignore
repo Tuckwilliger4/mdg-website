@@ -3,6 +3,7 @@ node_modules/
 .next/
 .env.local
 .env.*.local
+.DS_Store
 
 # legacy site (keep out of new repo root) - adjust as needed
 mdg_prev_website/

@@ -10,25 +10,30 @@ export default function Services({ data }) {
     }))
   }
 
+  // Safety check for data
+  if (!data || !data.services) {
+    return <div>Loading services...</div>
+  }
+
   return (
     <>
       <section className="section-services-header">
         <img src={data.heroImage} alt="McKim Design Group" className="services-hero-image" />
         <div className="services-header-content">
           <h2>{data.title}</h2>
-          <p>{data.description}</p>
+          <p>{data.subtitle}</p>
         </div>
       </section>
 
       <section className="section-services-titles">
-        {data.sections.map((section, index) => (
+        {data.services.map((service, index) => (
           <div key={index} className="services-section">
             <button 
               type="button" 
               className={`services-btn ${openSections[index] ? 'active' : ''}`}
               onClick={() => toggleSection(index)}
             >
-              <p>{section.title}</p>
+              <p>{service.name}</p>
               <span className={`services-icon ${openSections[index] ? 'open' : ''}`}>
                 <span className="horizontal-line"></span>
                 <span className="vertical-line"></span>
@@ -37,7 +42,7 @@ export default function Services({ data }) {
             <div className={`services-content ${openSections[index] ? 'open' : ''}`}>
               <div className="services-content-inner">
                 <ul>
-                  {section.items.map((item, itemIndex) => (
+                  {service.items.map((item, itemIndex) => (
                     <li key={itemIndex}>{item}</li>
                   ))}
                 </ul>

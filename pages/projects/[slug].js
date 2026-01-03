@@ -24,8 +24,14 @@ export async function getStaticPaths(){
 
 export async function getStaticProps({params}){
   try {
-    const project = await getProjectBySlug(params.slug)
-    const site = await getSiteData()
+    // Get ALL projects once, then filter for this one
+    // This is more efficient than individual getProjectBySlug calls
+    const [projects, site] = await Promise.all([
+      getProjects(),
+      getSiteData()
+    ])
+    
+    const project = projects.find(p => p.slug === params.slug)
     
     if (!project) {
       return { notFound: true }

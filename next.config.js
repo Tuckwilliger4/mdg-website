@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Disable export mode for CMS development (re-enable for deployment)
-  // output: 'export',
+  output: 'export',
+  trailingSlash: true,
   images: {
     unoptimized: true,
   },

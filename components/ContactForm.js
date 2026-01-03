@@ -20,24 +20,30 @@ export default function ContactForm({ site }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    
+    // Check honeypot field
+    if (formData.website) {
+      return // Bot detected, silently fail
+    }
+    
     setIsSubmitting(true)
     setSubmitStatus('')
 
     try {
-      const response = await fetch('/api/contact', {
+      const form = e.target
+      const formDataObj = new FormData(form)
+      
+      const response = await fetch('/', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData)
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formDataObj).toString()
       })
 
       if (response.ok) {
         setSubmitStatus('success')
         setFormData({ name: '', email: '', message: '', website: '' })
       } else {
-        const data = await response.json()
-        setSubmitStatus(data.error || 'error')
+        setSubmitStatus('error')
       }
     } catch (error) {
       setSubmitStatus('error')
@@ -60,7 +66,8 @@ export default function ContactForm({ site }) {
         </div>
         <div className="contact-page-flex">
           <h2 className="contact-section-title">Inquiries</h2>
-          <form onSubmit={handleSubmit} className="contact-form">
+          <form onSubmit={handleSubmit} className="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="website">
+            <input type="hidden" name="form-name" value="contact" />
             <div className="form-item">
               <label htmlFor="name">Name</label>
               <input

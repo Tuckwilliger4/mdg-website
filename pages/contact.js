@@ -1,7 +1,6 @@
-import fs from 'fs'
-import path from 'path'
 import Layout from '../components/Layout'
 import ContactForm from '../components/ContactForm'
+import { getSiteData } from '../lib/cms'
 
 export default function Contact({ site }) {
   return (
@@ -12,7 +11,6 @@ export default function Contact({ site }) {
 }
 
 export async function getStaticProps() {
-  const sitePath = path.join(process.cwd(),'content','mock','site.json')
-  const site = JSON.parse(fs.readFileSync(sitePath,'utf8'))
+  const site = await getSiteData()
   return { props: { site } }
 }

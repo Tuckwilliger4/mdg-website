@@ -1,7 +1,6 @@
-import fs from 'fs'
-import path from 'path'
 import Layout from '../components/Layout'
 import Services from '../components/Services'
+import { getSiteData, getServices } from '../lib/cms'
 
 export default function ServicesPage({services, site}){
   return (
@@ -12,9 +11,7 @@ export default function ServicesPage({services, site}){
 }
 
 export async function getStaticProps(){
-  const servicesPath = path.join(process.cwd(),'content','mock','services.json')
-  const sitePath = path.join(process.cwd(),'content','mock','site.json')
-  const services = JSON.parse(fs.readFileSync(servicesPath,'utf8'))
-  const site = JSON.parse(fs.readFileSync(sitePath,'utf8'))
+  const services = await getServices()
+  const site = await getSiteData()
   return {props:{services, site}}
 }

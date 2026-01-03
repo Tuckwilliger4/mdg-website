@@ -19,8 +19,8 @@ export default function ProjectDetails({ project }) {
       <div className="project-content">
         <div className="project-meta">
           {renderMetaItem('Project Status', project.status)}
-          {renderMetaItem('Design Lead', project.designLead)}
           {renderMetaItem('Year', project.year)}
+          {renderMetaItem('Design Lead', project.designLead)}
           {renderMetaItem('Size', project.size)}
           {renderMetaItem('Type', project.type)}
           {/* Add more metadata fields as needed */}

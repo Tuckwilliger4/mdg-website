@@ -35,7 +35,7 @@ export default function AboutSlides({ slides }) {
           className={`about-slides-container${activeIdx === i ? ' active' : ''}`}
           ref={el => refs.current[i] = el}
         >
-          <div className="about-slide-word">{s.title}</div>
+          <div className="about-slide-word">{s.word}</div>
           <div className={`about-caption${activeIdx === i ? ' show' : ''}`}>{s.caption}</div>
         </div>
       ))}

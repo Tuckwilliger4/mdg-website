@@ -37,12 +37,12 @@ export default function Nav({ site }){
       <header ref={headerRef} className={headerClasses}>
         <div style={{display:'flex',alignItems:'center'}}>
           {site?.branding?.mobileLogo ? (
-            <Link href="/"><img src={site.branding.mobileLogo} alt={site.branding.companyFullName} className="nav-logo mobile-only" style={{height:50}} /></Link>
+            <Link href="/"><img src={site.branding.mobileLogo} className="nav-logo mobile-only" style={{height:50}} /></Link>
           ) : (
             <Link href="/" className="mobile-only"><Logo size="nav" className="title" /></Link>
           )}
           {site?.branding?.desktopLogo ? (
-            <Link href="/"><img src={site.branding.desktopLogo} alt={site.branding.companyFullName} className="nav-logo desktop-logo" style={{height:50}} /></Link>
+            <Link href="/"><img src={site.branding.desktopLogo} className="nav-logo desktop-logo" style={{height:50}} /></Link>
           ) : (
             <Link href="/"><Logo size="nav" className="title desktop-logo" /></Link>
           )}

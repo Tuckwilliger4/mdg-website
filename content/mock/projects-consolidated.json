@@ -1,0 +1,221 @@
+[
+  {
+    "category": "Educational",
+    "projectList": [
+      {
+        "slug": "cougar-hall",
+        "title": "Cougar Hall",
+        "location": "Morgan Hill, CA",
+        "year": "2023",
+        "size": "15,000 sq ft",
+        "projectStatus": "Completed",
+        "designLead": "John Smith",
+        "type": "Educational Renovation",
+        "description": "<p>Renovation and addition to Cougar Hall at a local educational facility. This project involved modernizing the existing structure while preserving its historical character. The design incorporated sustainable materials and energy-efficient systems to create a contemporary learning environment.</p><p>The renovation included updated classrooms, improved accessibility features, and enhanced technology infrastructure to support modern educational needs.</p>",
+        "hero": "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80",
+        "images": [
+          "https://placehold.co/1200x800/3b82f6/white?text=Cougar+Hall+Exterior",
+          "https://placehold.co/1200x800/60a5fa/white?text=Cougar+Hall+Interior"
+        ]
+      },
+      {
+        "slug": "brooktree-elementary",
+        "title": "Brooktree Elementary",
+        "location": "San Jose, CA",
+        "year": "2019",
+        "size": "45,000 sq ft",
+        "projectStatus": "Completed",
+        "designLead": "Jane Doe",
+        "type": "Educational Modernization",
+        "description": "A comprehensive modernization project for Brooktree Elementary School, featuring new classrooms, updated technology infrastructure, and sustainable design elements that create an inspiring learning environment for students and teachers.",
+        "hero": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80",
+        "images": [
+          "https://placehold.co/1200x800/3b82f6/white?text=Brooktree+Elementary+School",
+          "https://placehold.co/1200x800/60a5fa/white?text=Classroom+Building",
+          "https://placehold.co/1200x800/93c5fd/white?text=Main+Entrance",
+          "https://placehold.co/1200x800/3b82f6/white?text=Campus+Overview"
+        ]
+      },
+      {
+        "slug": "campbell-high-school",
+        "title": "Campbell High School",
+        "location": "Campbell, CA",
+        "year": "2020",
+        "size": "120,000 sq ft",
+        "projectStatus": "Completed",
+        "designLead": "John Smith",
+        "type": "Educational Expansion",
+        "description": "A major campus renovation and expansion project for Campbell High School, including new science laboratories, performing arts center, and athletic facilities designed to support 21st-century learning.",
+        "hero": "https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=800&q=80",
+        "images": [
+          "https://placehold.co/1200x800/3b82f6/white?text=Campbell+High+School",
+          "https://placehold.co/1200x800/60a5fa/white?text=Science+Labs",
+          "https://placehold.co/1200x800/93c5fd/white?text=Performing+Arts+Center"
+        ]
+      },
+      {
+        "slug": "cupertino-library",
+        "title": "Cupertino Library",
+        "location": "Cupertino, CA",
+        "year": "2018",
+        "size": "35,000 sq ft",
+        "projectStatus": "Completed",
+        "designLead": "Jane Doe",
+        "type": "Educational Facility",
+        "description": "A modern public library design featuring flexible learning spaces, collaborative work areas, and integrated technology systems to serve the diverse needs of the Cupertino community.",
+        "hero": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=800&q=80",
+        "images": [
+          "https://placehold.co/1200x800/3b82f6/white?text=Cupertino+Library",
+          "https://placehold.co/1200x800/60a5fa/white?text=Reading+Areas",
+          "https://placehold.co/1200x800/93c5fd/white?text=Main+Entrance"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Commercial",
+    "projectList": [
+      {
+        "slug": "paradise-administration",
+        "title": "Paradise Administration",
+        "location": "Paradise, CA",
+        "year": "2021",
+        "size": "75,000 sq ft",
+        "projectStatus": "Completed",
+        "designLead": "John Smith",
+        "type": "Commercial Administrative",
+        "description": "A comprehensive administrative complex designed to house multiple government departments in a unified, efficient workspace that promotes collaboration and serves the community effectively.",
+        "hero": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
+        "images": [
+          "https://placehold.co/1200x800/10b981/white?text=Paradise+Administration",
+          "https://placehold.co/1200x800/34d399/white?text=Main+Building",
+          "https://placehold.co/1200x800/6ee7b7/white?text=Entrance+Plaza"
+        ]
+      },
+      {
+        "slug": "rohnert-park-city-hall",
+        "title": "Rohnert Park City Hall",
+        "location": "Rohnert Park, CA",
+        "year": "2017",
+        "size": "85,000 sq ft",
+        "projectStatus": "Completed",
+        "designLead": "Jane Doe",
+        "type": "Commercial Government",
+        "description": "LEED Gold certified city hall featuring sustainable design principles, energy-efficient systems, and public spaces designed to foster community engagement and civic pride.",
+        "hero": "https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=800&q=80",
+        "images": [
+          "https://placehold.co/1200x800/10b981/white?text=Rohnert+Park+City+Hall",
+          "https://placehold.co/1200x800/34d399/white?text=Main+Entrance",
+          "https://placehold.co/1200x800/6ee7b7/white?text=Council+Chambers"
+        ]
+      },
+      {
+        "slug": "downtown-office-complex",
+        "title": "Downtown Office Complex",
+        "location": "San Jose, CA",
+        "year": "2022",
+        "size": "150,000 sq ft",
+        "projectStatus": "Completed",
+        "designLead": "John Smith",
+        "type": "Commercial Mixed-Use",
+        "description": "A modern mixed-use development in downtown San Jose featuring office spaces, retail, and parking facilities designed to revitalize the urban core and support business growth.",
+        "hero": "https://images.unsplash.com/photo-1565073900403-98c0e76fb39c?auto=format&fit=crop&w=800&q=80",
+        "images": [
+          "https://placehold.co/1200x800/10b981/white?text=Downtown+Office+Complex",
+          "https://placehold.co/1200x800/34d399/white?text=Office+Tower",
+          "https://placehold.co/1200x800/6ee7b7/white?text=Retail+Spaces"
+        ]
+      },
+      {
+        "slug": "tech-campus-expansion",
+        "title": "Tech Campus Expansion",
+        "location": "Palo Alto, CA",
+        "year": "2023",
+        "size": "200,000 sq ft",
+        "projectStatus": "Completed",
+        "designLead": "Jane Doe",
+        "type": "Commercial Technology",
+        "description": "An innovative expansion of an existing tech campus, incorporating flexible workspaces, collaborative areas, and wellness facilities to support the evolving needs of modern technology companies.",
+        "hero": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
+        "images": [
+          "https://placehold.co/1200x800/10b981/white?text=Tech+Campus+Expansion",
+          "https://placehold.co/1200x800/34d399/white?text=Innovation+Center",
+          "https://placehold.co/1200x800/6ee7b7/white?text=Collaboration+Spaces"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Residential",
+    "projectList": [
+      {
+        "slug": "capitola-residence",
+        "title": "Capitola Residence",
+        "location": "Capitola, CA",
+        "year": "2021",
+        "size": "3,500 sq ft",
+        "projectStatus": "Completed",
+        "designLead": "John Smith",
+        "type": "Residential Custom",
+        "description": "A coastal residential design that maximizes ocean views while maintaining privacy. Features sustainable materials, energy-efficient systems, and outdoor living spaces that complement the natural seaside environment.",
+        "hero": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+        "images": [
+          "https://placehold.co/1200x800/f59e0b/white?text=Capitola+Residence",
+          "https://placehold.co/1200x800/fbbf24/white?text=Ocean+View",
+          "https://placehold.co/1200x800/fcd34d/white?text=Living+Spaces"
+        ]
+      },
+      {
+        "slug": "eichler-renovation",
+        "title": "Eichler Renovation",
+        "location": "Palo Alto, CA",
+        "year": "2020",
+        "size": "2,800 sq ft",
+        "projectStatus": "Completed",
+        "designLead": "Jane Doe",
+        "type": "Residential Renovation",
+        "description": "A sensitive renovation of a mid-century Eichler home that preserves the original architectural character while updating systems and spaces for contemporary family living.",
+        "hero": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80",
+        "images": [
+          "https://placehold.co/1200x800/f59e0b/white?text=Eichler+Renovation",
+          "https://placehold.co/1200x800/fbbf24/white?text=Mid-Century+Modern",
+          "https://placehold.co/1200x800/fcd34d/white?text=Indoor-Outdoor+Living"
+        ]
+      },
+      {
+        "slug": "garthwick-family-home",
+        "title": "Garthwick Family Home",
+        "location": "San Mateo, CA",
+        "year": "2019",
+        "size": "4,200 sq ft",
+        "projectStatus": "Completed",
+        "designLead": "John Smith",
+        "type": "Residential Custom",
+        "description": "A custom family home designed for multigenerational living, featuring flexible spaces, accessible design elements, and private outdoor areas that support family gatherings and individual privacy.",
+        "hero": "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=800&q=80",
+        "images": [
+          "https://placehold.co/1200x800/f59e0b/white?text=Garthwick+Family+Home",
+          "https://placehold.co/1200x800/fbbf24/white?text=Multigenerational+Design",
+          "https://placehold.co/1200x800/fcd34d/white?text=Outdoor+Areas"
+        ]
+      },
+      {
+        "slug": "rolling-oaks-estate",
+        "title": "Rolling Oaks Estate",
+        "location": "Los Gatos, CA",
+        "year": "2022",
+        "size": "6,500 sq ft",
+        "projectStatus": "Completed",
+        "designLead": "Jane Doe",
+        "type": "Residential Estate",
+        "description": "A luxury estate home nestled in the rolling hills of Los Gatos, featuring expansive living spaces, wine cellar, home theater, and carefully designed landscape integration that preserves existing oak trees.",
+        "hero": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80",
+        "images": [
+          "https://placehold.co/1200x800/f59e0b/white?text=Rolling+Oaks+Estate",
+          "https://placehold.co/1200x800/fbbf24/white?text=Luxury+Living",
+          "https://placehold.co/1200x800/fcd34d/white?text=Hillside+Setting"
+        ]
+      }
+    ]
+  }
+]

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export default function ContactForm({ content }) {
+export default function ContactForm({ site }) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -50,16 +50,16 @@ export default function ContactForm({ content }) {
     <section className="section-contact-page">
       <div className="contact-page-container">
         <div className="contact-page-info">
-          <h2 className="contact-section-title">{content.title}</h2>
+          <h2 className="contact-section-title">Contact</h2>
           <div className="contact-page-title">
-            <p>{content.companyName}<br/>{content.address}<br/>{content.cityState}</p>
-            <p><span>T</span><span className="contact-value">{content.phone}</span></p>
-            <p><span>F</span><span className="contact-value">{content.fax}</span></p>
-            <p><span>E</span><span className="contact-value">{content.email}</span></p>
+            <p>{site?.branding?.companyName}<br/>{site?.contact?.address}</p>
+            <p><span>T</span><span className="contact-value">{site?.contact?.phone}</span></p>
+            {site?.contact?.fax && <p><span>F</span><span className="contact-value">{site?.contact?.fax}</span></p>}
+            <p><span>E</span><span className="contact-value">{site?.contact?.email}</span></p>
           </div>
         </div>
         <div className="contact-page-flex">
-          <h2 className="contact-section-title">{content.subtitle}</h2>
+          <h2 className="contact-section-title">Inquiries</h2>
           <form onSubmit={handleSubmit} className="contact-form">
             <div className="form-item">
               <label htmlFor="name">Name</label>

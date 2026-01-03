@@ -10,7 +10,7 @@ export default function Home({ content, site, leadershipImages }) {
   const workItemCount = content.sectionWork ? content.sectionWork.length : 3
 
   return (
-    <Layout meta={{title: content.siteTitle}} site={site}>
+    <Layout meta={{title: site?.meta?.title}} site={site}>
       <Slideshow images={content.heroImages} captions={content.heroCaptions} />
       <SectionUs data={content.sectionUs} leadershipImages={leadershipImages} />
       <ScrollProvider>

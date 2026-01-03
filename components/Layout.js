@@ -18,7 +18,7 @@ export default function Layout({ children, site }) {
           <div className="footer-content">
             <div className="footer-logo-section">
               {site?.branding?.desktopLogo ? (
-                <img src={site.branding.desktopLogo} alt={site.branding.companyFullName} />
+                <img src={site.branding.desktopLogo}/>
               ) : (
                 <Logo size="footer" className="footer-company-name" />
               )}
@@ -44,7 +44,7 @@ export default function Layout({ children, site }) {
           </div>
           
           <div className="footer-copyright">
-            Copyright © {new Date().getFullYear()} McKim Design Group. All rights reserved.
+            Copyright {new Date().getFullYear()} © {site?.branding?.companyName || 'McKim Design Group'}. All rights reserved.
           </div>
         </div>
       </footer>

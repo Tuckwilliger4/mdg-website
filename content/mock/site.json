@@ -5,15 +5,11 @@
     "keywords": "architecture, design, construction, San Jose, California, K-12, educational, residential, commercial"
   },
   "branding": {
-    "companyName": "MDG",
-    "companyFullName": "McKim Design Group",
+    "companyName": "McKim Design Group",
     "desktopLogo": null,
     "mobileLogo": "/img/logo.png",
     "favicon": "/favicon.ico",
     "primaryColor": "#7819B1",
-    "secondaryColor": "#D3AC3F",
-    "accentColor": "#964636",
-    "fontHeading": "Montserrat",
     "fontBody": "Lato"
   },
   "contact": {

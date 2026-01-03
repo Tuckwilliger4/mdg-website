@@ -26,7 +26,6 @@
 
 .about-slide-word {
   font-size: 4rem;
-  font-family: 'Montserrat', sans-serif;
   color: rgba(255,255,255,0.7);
   font-weight: 900;
   letter-spacing: 4px;
@@ -45,7 +44,6 @@
   font-size: 1.6rem;
   color: var(--primary-color);
   opacity: 0;
-  font-family: 'Lato', sans-serif;
   font-weight: 700;
   transition: opacity 0.3s;
   margin-top: 0px;
@@ -143,7 +141,7 @@
 
 html, body {
   background-color: #000;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-body);
   font-size: 16px;
   font-weight: 300;
   overflow-x: hidden;
@@ -275,6 +273,7 @@ h6 {
 .title h1 {
   margin: 0;
   white-space: nowrap;
+  font-weight: 800;
 }
 
 /* Logo display logic */
@@ -356,7 +355,7 @@ h6 {
 }
 
 :root {
-  --primary-color: var(--purple-color);
+  /* Primary color will be set dynamically from site.json */
   --purple-color: rgb(120, 25, 177);
   --yellow-color: rgb(211, 172, 63);
   --red-color: rgb(150, 54, 54);
@@ -370,6 +369,9 @@ h6 {
   --mobile-max: 767px;
   --tablet-max: 1023px;
   --wide-desktop-min: 1400px;
+  
+  /* Font families will be set dynamically from site.json */
+  --font-body: 'Lato', sans-serif;
 }
 #slide-container {
   width: 100vw;
@@ -609,10 +611,17 @@ h6 {
 
 .square-img {
   border-radius: 8px !important;
-  width: 60px !important;
-  height: 60px !important;
+  width: 150px !important;
+  height: 150px !important;
   object-fit: cover;
   filter:grayscale()
+}
+
+@media (max-width: 1023px) {
+  .square-img {
+    width: 100px !important;
+    height: 100px !important;
+  }
 }
 
 .learnmore-btn:hover .arrow-span {

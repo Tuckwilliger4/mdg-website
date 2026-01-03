@@ -13,7 +13,7 @@ export default function About({content, site}){
       <OurStory data={content.ourStory} />
       <Stats stats={content.stats} />
       <LeadershipSlideshow leaders={content.leadership} />
-      <AboutSlides slides={content.aboutSlides} />
+      <AboutSlides slides={content.valueSlides} />
     </Layout>
   )
 }

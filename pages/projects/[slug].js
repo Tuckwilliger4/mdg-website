@@ -1,8 +1,7 @@
-import fs from 'fs'
-import path from 'path'
 import Layout from '../../components/Layout'
 import ProjectSlideshow from '../../components/ProjectSlideshow'
 import ProjectDetails from '../../components/ProjectDetails'
+import { getProjects, getProjectBySlug, getSiteData } from '../../lib/cms'
 
 export default function Project({project, site}){
   if(!project) return <Layout site={site}><div style={{padding:40}}>Project not found</div></Layout>
@@ -16,26 +15,25 @@ export default function Project({project, site}){
 }
 
 export async function getStaticPaths(){
-  const dir = path.join(process.cwd(),'content','mock','projects')
-  const files = fs.readdirSync(dir).filter(f=>f.endsWith('.json'))
-  const paths = files.map(f=>({params:{slug:f.replace('.json','')}}))
-  return {paths, fallback:false}
+  const projects = await getProjects()
+  const paths = projects.map(project => ({
+    params: { slug: project.slug }
+  }))
+  return { paths, fallback: false }
 }
 
 export async function getStaticProps({params}){
   try {
-    const projectPath = path.join(process.cwd(),'content','mock','projects', `${params.slug}.json`)
-    const sitePath = path.join(process.cwd(),'content','mock','site.json')
+    const project = await getProjectBySlug(params.slug)
+    const site = await getSiteData()
     
-    // Check if project file exists
-    if (!fs.existsSync(projectPath)) {
+    if (!project) {
       return { notFound: true }
     }
     
-    const project = JSON.parse(fs.readFileSync(projectPath,'utf8'))
-    const site = JSON.parse(fs.readFileSync(sitePath,'utf8'))
-    return {props:{project, site}}
+    return { props: { project, site } }
   } catch (error) {
+    console.error('Error loading project:', error)
     return { notFound: true }
   }
 }

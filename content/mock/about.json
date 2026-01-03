@@ -13,9 +13,9 @@
     {"stat": "85%", "desc": "of our customers are repeat clients"},
     {"stat": "16+", "desc": "residential neighborhoods in which we have worked"}
   ],
-  "aboutSlides": [
-    {"title": "Personal", "caption": "Our role is to fit your needs."},
-    {"title": "Engagement", "caption": "We work side by side collaboratively with our clients."},
-    {"title": "Matters", "caption": "Big or small your project matters to us."}
+  "valueSlides": [
+    {"word": "Personal", "caption": "Our role is to fit your needs."},
+    {"word": "Engagement", "caption": "We work side by side collaboratively with our clients."},
+    {"word": "Matters", "caption": "Big or small your project matters to us."}
   ]
 }

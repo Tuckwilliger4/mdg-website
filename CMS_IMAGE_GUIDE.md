@@ -40,8 +40,6 @@ Branding:
 - Logo Image: [upload]
 - Logo Image Dark: [upload]
 - Primary Color: #7819B1 (color picker)
-- Secondary Color: #D3AC3F
-- Accent Color: #964636
 - Font Heading: Montserrat (dropdown)
 - Font Body: Lato (dropdown)
 

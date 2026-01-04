@@ -1,54 +1,62 @@
-# CMS Image Upload Requirements
+# Simple Image Guide for Hygraph CMS
 
-## For Client Reference
+## What You Need to Know
 
-When uploading content to the CMS, follow these image guidelines:
+This website uses Hygraph CMS to manage all content. Here's how to upload images properly.
 
-### Leadership Photos
-- **Format:** PNG with transparent background
-- **Dimensions:** 500×500px minimum (square)
-- **How to prepare:** Use [remove.bg](https://www.remove.bg) to remove background
-- **Crop:** Should show head and shoulders (upper 25% of body)
-- **File naming:** firstname-lastname.jpg (e.g., kirk-mckim.jpg)
+## Image Requirements
 
-### Project Hero Images
-- **Format:** JPG or PNG
-- **Dimensions:** 1920×1080px recommended (any aspect ratio works)
-- **File size:** Under 2MB
-- **Quality:** High resolution for professional appearance
+### Project Photos
+- **Type**: JPG or PNG files
+- **Size**: Keep under 2MB each
+- **Quality**: High quality photos that look professional
+- **Names**: Give name in format "projects-<project-name>-<image-number>.jpg" Alternatively <image-number> could be a description to what the photo is too, just ensure projects-<project-name> is first.
 
-### Logo
-- **Format:** PNG with transparent background OR SVG
-- **Dimensions:** Variable, but ensure readable at small sizes
-- **Versions needed:** 
-  - Regular (for light backgrounds)
-  - Dark version optional (for dark backgrounds)
+### Team Member Photos  
+- **Type**: PNG with transparent background (use remove.bg website to remove background)
+- **Size**: Square photos
+- **Crop**: Show head and shoulders only
+- **Names**: Use "leader-<name>.png"
 
-### Site Banner/Hero Images  
-- **Format:** JPG
-- **Dimensions:** 1920×1080px minimum  
-- **File size:** Under 3MB
-- **Aspect ratio:** 16:9 recommended
+### Logo and Branding
+- **Type**: PNG with transparent background
+- **Size**: Any size, but make sure it looks good when small
+- **Use**: Company logo for the website header
 
-## CMS Fields Reference
+### Homepage Slideshow
+- **Type**: JPG files
+- **Size**: 1920x1080 pixels (landscape format)
+- **Quality**: Very high quality since these are the first images visitors see
 
-### Site Settings (site.json → CMS)
-```
-Branding:
-- Company Name: "MDG"
-- Company Full Name: "McKim Design Group"
-- Logo Image: [upload]
-- Logo Image Dark: [upload]
-- Primary Color: #7819B1 (color picker)
-- Font Heading: Montserrat (dropdown)
-- Font Body: Lato (dropdown)
+## How to Upload in Hygraph
 
-Contact:
-- Address: [text]
-- Phone: [text]
-- Fax: [text]
-- Email: [email]
-```
+1. **Login to Hygraph** using the credentials provided
+2. **Find the right section**:
+   - Projects: Go to Content > "Page - Projects" 
+   - Team: Go to "Team Leader Lists"
+   - Homepage: Go to "Page Home Plural"
+3. **Click "+ Asset" button** to upload new images
+4. **Drag and drop** your images or click to browse
+5. **Wait for upload** to complete (green checkmark)
+6. **Select the image** in your content
+7. **Click "Publish"** button to make changes live on website
+
+## Important Tips
+
+- Always click "PUBLISH" after making changes or they won't show on the website
+- Upload images first, then add them to your content
+- If an image looks blurry, try uploading a higher quality version
+- Keep file names simple (no spaces or special characters)
+
+## Getting Help
+
+- Remove background from photos: visit remove.bg
+- Resize images: use any photo editing app or canva.com
+- Questions: Contact the developer
+
+## What Happens After Publishing
+
+When you click "Publish" in Hygraph, it automatically rebuilds the website with your new content. This takes about 2-3 minutes.
 
 ### Leadership Team (leadership.json → CMS)
 ```
@@ -85,7 +93,7 @@ Each Category:
 
 1. Client uploads image in CMS → Gets URL like `https://cdn.sanity.io/images/abc123.jpg`
 2. Client publishes content → Triggers webhook to Vercel
-3. Vercel rebuilds site → Next.js fetches all content from CMS API
+3. Netlify rebuilds site → Next.js fetches all content from CMS API
 4. Site goes live with new content → Images served from CMS CDN (fast, cached)
 
 ## No Code Required

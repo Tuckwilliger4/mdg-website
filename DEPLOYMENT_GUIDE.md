@@ -1,53 +1,117 @@
-# Project Structure & Deployment Guide
+# Simple Deployment Guide
 
-## 1. Footer Data Issue - FIXED ✅
+## What This Website Uses
 
-**Problem:** After restructuring `site.json` to have nested `contact` object, footer was looking for `site.address` instead of `site.contact.address`.
+- **CMS**: Hygraph (manages all content like text and images)
+- **Hosting**: Netlify (serves the website to visitors)
+- **Code**: GitHub (stores the website code)
 
-**Solution:** Updated `Layout.js` footer to use optional chaining with fallback:
-```javascript
-site?.contact?.address || site?.address
+## How It All Works Together
+
+1. **Content changes**: Client updates content in Hygraph CMS
+2. **Automatic rebuild**: Hygraph sends a signal to Netlify 
+3. **New website**: Netlify rebuilds and publishes the updated site
+4. **Fast delivery**: Visitors get the new content from Netlify's fast servers
+
+## Setting Up Deployment
+
+### Step 1: Connect GitHub to Netlify
+
+1. **Login to Netlify** (netlify.com)
+2. **Click "New site from Git"**
+3. **Choose GitHub** and select this repository
+4. **Build settings**:
+   - Build command: `npm run build`
+   - Publish directory: `.next`
+   - Node version: 18
+
+### Step 2: Add Environment Variables
+
+In Netlify dashboard, go to Site settings → Environment variables:
+
+```
+USE_CMS=true
+HYGRAPH_ENDPOINT=https://api-us-west-2.hygraph.com/v2/cmjvpwtkj01ox07uoqv7dv8ko/master
+HYGRAPH_TOKEN=your-long-token-here
 ```
 
-This supports both old and new data structures.
-
----
-
-## 2. node_modules Folder
-
-**What is it?**
-- Contains all npm package dependencies (React, Next.js, etc.)
-- Created when you run `npm install`
-- Can be **HUGE** (100-500MB+)
-
-**Do you need it?**
-- ✅ **YES locally** - Required to run the dev server and build
-- ❌ **NO in Git** - Already in `.gitignore`, never commit it
-- ❌ **NO on host** - Vercel/Netlify install it automatically during build
-
-**Best Practice:**
-```bash
-# If it gets corrupted or you switch branches:
-rm -rf node_modules
-npm install
-
-# Fresh clone on new machine:
-git clone repo
-npm install
-npm run dev
+Also add email settings (get from client):
+```
+SMTP_HOST=mail.theirdomain.com
+SMTP_PORT=587
+SMTP_SECURE=true
+SMTP_USER=website@theirdomain.com
+SMTP_PASS=their-password
+CONTACT_EMAIL=client@theirdomain.com
 ```
 
----
+### Step 3: Set Up Automatic Updates
 
-## 3. .next Folder
+1. **In Hygraph**: Go to Settings → Webhooks
+2. **Add new webhook**:
+   - Name: "Netlify Deploy"  
+   - URL: Your Netlify build hook URL (get from Netlify)
+   - Trigger: Only on "PUBLISHED" (not drafts)
 
-**What is it?**
-- Next.js build cache and compiled output
-- Created when you run `npm run dev` or `npm run build`
-- Contains optimized JavaScript bundles
+3. **In Netlify**: Go to Site settings → Build & deploy → Build hooks
+   - Create new build hook
+   - Copy the URL and paste in Hygraph webhook
 
-**Contents:**
-- `/cache` - Build cache for faster rebuilds
+## Testing Everything Works
+
+1. **Make a small change** in Hygraph (like edit some text)
+2. **Click "Publish"** 
+3. **Wait 2-3 minutes** for rebuild
+4. **Check website** - your changes should appear
+
+## Common Problems and Solutions
+
+### Website Not Updating After Hygraph Changes
+- Check if you clicked "Publish" in Hygraph (not just "Save")
+- Look at Netlify deploy log for errors
+- Make sure webhook is set to trigger on "PUBLISHED" only
+
+### Contact Form Not Working
+- Check email settings in Netlify environment variables
+- Test with client's actual email credentials
+- Make sure SMTP settings match their email provider
+
+### Images Not Loading
+- Images must be "Published" in Hygraph, not just uploaded
+- Check that image URLs are accessible
+- Large images may take time to process
+
+### Build Failing
+- Check Netlify build logs for specific error
+- Make sure all environment variables are set
+- Try rebuilding manually from Netlify dashboard
+
+## For Future Updates
+
+### Adding New Content Types
+1. **Create in Hygraph**: Add new content model
+2. **Update code**: Modify `lib/cms.js` to fetch new content
+3. **Test locally**: Run `npm run dev` to test changes
+4. **Deploy**: Push code changes to GitHub
+
+### Changing Design
+1. **Edit CSS**: Modify files in `styles/` folder  
+2. **Test locally**: Run `npm run dev` to see changes
+3. **Deploy**: Push to GitHub, Netlify auto-deploys
+
+## Important Notes
+
+- **Never commit passwords** - use environment variables only
+- **Always test locally first** - run `npm run dev` before pushing
+- **Content vs Code**: Content changes happen in Hygraph, design changes happen in code
+- **Backups**: Hygraph keeps version history of all content changes
+
+## Emergency Contacts
+
+- **Hygraph Login**: [credentials stored securely]
+- **Netlify Access**: [team access configured] 
+- **GitHub Repository**: [repository URL]
+- **Client Email Settings**: [stored in password manager]
 - `/static` - Optimized JS/CSS bundles
 - `/server` - Server-side rendered pages
 

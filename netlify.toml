@@ -1,7 +1,6 @@
 [build]
   command = "npm run build"
-  publish = ".next"
+  publish = "out"
 
-# Force disable all plugins to avoid the broken one
-[build.processing]
-  skip_processing = false
+[functions]
+  directory = "netlify/functions"

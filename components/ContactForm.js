@@ -30,7 +30,11 @@ export default function ContactForm({ site }) {
     setSubmitStatus('')
 
     try {
-      const response = await fetch('/api/contact', {
+      // Use different endpoints for local vs production
+      const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+      const endpoint = isLocal ? '/api/contact' : '/.netlify/functions/contact'
+      
+      const response = await fetch(endpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

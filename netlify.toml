@@ -1,0 +1,7 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+# Force disable all plugins to avoid the broken one
+[build.processing]
+  skip_processing = false

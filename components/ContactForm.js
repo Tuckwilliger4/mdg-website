@@ -30,13 +30,16 @@ export default function ContactForm({ site }) {
     setSubmitStatus('')
 
     try {
-      const form = e.target
-      const formDataObj = new FormData(form)
-      
-      const response = await fetch('/', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formDataObj).toString()
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message
+        }),
       })
 
       if (response.ok) {

@@ -145,7 +145,7 @@ exports.handler = async (event, context) => {
     }
 
     // Create transporter with Hurricane Electric SMTP
-    const transporter = nodemailer.createTransporter({
+    const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST || 'mail.hurricaneelectric.com',
       port: parseInt(process.env.SMTP_PORT) || 587,
       secure: process.env.SMTP_SECURE === 'true' || false,
@@ -201,7 +201,7 @@ Message: ${message}
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Headers': 'Content-Type',
       },
-      body: JSON.stringify({ message: 'Error sending email' }),
+      body: JSON.stringify({ message: 'We couldn\'t send your message due to a technical issue. Please try again or contact us directly.' }),
     };
   }
 };
